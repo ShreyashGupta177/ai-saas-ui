@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-dark-bg dark:bg-light-bg text-dark-text dark:text-light-text transition-colors duration-300;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Glassmorphism */
+.glassmorphic {
+  @apply bg-white/5 dark:bg-black/5 backdrop-blur-xl border border-white/10 dark:border-black/10;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-secondary dark:bg-light-secondary rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-blue-600 rounded-full hover:bg-blue-700;
+}
